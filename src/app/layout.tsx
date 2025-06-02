@@ -12,10 +12,10 @@ import "./globals.css";
 //   subsets: ["latin"],
 // });
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter", // opsional, kalau pakai className juga
-})
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body
